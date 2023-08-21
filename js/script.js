@@ -61,3 +61,15 @@ themeColor.forEach(color => color.addEventListener('click', () => {
 let background = color.style.background;
 document.querySelector('.btn , img, .about-img img, .home-img img, .social-media a:hover').style.background = background;
 }));*/
+
+/* lecture auto video*/
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('autoplayVideo');
+    
+    // Tentez de lire la vidéo automatiquement avec du son lorsqu'un événement de clic se produit sur la page.
+    document.addEventListener('click', () => {
+      video.play().catch(error => {
+        // La lecture automatique a échoué, gérer l'erreur ici.
+      });
+    });
+  });
